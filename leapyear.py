@@ -14,12 +14,13 @@ def main():
 
         # Check if the year is divisible by 4 and 100 or by 4 and 400
         if year_int % 4 == 0:
-            if year_int % 100 != 0:
-                print("{} is a leap year".format(year_int))
-            elif year_int % 400 == 0:
-                print("{} is a leap year".format(year_int))
+            if year_int % 100 == 0:
+                if year_int % 400 == 0:
+                    print("{} is a leap year".format(year_int))
+                else:
+                    print("{} is not a leap year".format(year_int))
             else:
-                print("{} is not a leap year".format(year_int))
+                print("{} is a leap year".format(year_int))
         else:
             print("{} is not a leap year".format(year_int))
 
